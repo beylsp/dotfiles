@@ -10,12 +10,12 @@ To install the dotfiles and configure your environment, you can run the followin
 
 Using `wget`:
 ```bash
-wget -O - https://raw.githubusercontent.com/beylsp/dotfiles/main/install.sh | bash
+wget -O - https://raw.githubusercontent.com/beylsp/dotfiles/refs/heads/main/install.sh | bash
 ```
 
 Or, using `curl`:
 ```bash
-curl -sSL https://raw.githubusercontent.com/beylsp/dotfiles/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/beylsp/dotfiles/refs/heads/main/install.sh | bash
 ```
 
 This command will:
