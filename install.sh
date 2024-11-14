@@ -69,8 +69,8 @@ done
 "
 
 # add the sourcing block to .bashrc if it doesn't already exist
-if ! grep -Fxq "# Source all bash_* files from dotfiles/config if they exist" "$HOME/.bashrc"; then
-    echo "$SOURCE_BLOCK" >> "$HOME/.bashrc"
+if ! grep -Fxq "# Source all bash_* files from dotfiles/config if they exist" "$BASHRC"; then
+    echo "$SOURCE_BLOCK" >> "$BASHRC"
     echo "Added dotfiles sourcing block to .bashrc"
 fi
 
