@@ -47,8 +47,6 @@ for file in "$CONFIG_DIR"/*; do
     add_source_line "$file"
 done
 
-# source updated .bashrc to apply changes
-echo "Reloading $BASHRC ..."
-source "$BASHRC"
-
 echo "Dotfiles setup complete!"
+echo "To apply changes, please restart your terminal or run:"
+echo "source ~/.bashrc"
