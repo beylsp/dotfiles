@@ -10,10 +10,10 @@ BACKUP_DIR="$HOME/dotfiles_backup"
 # clone dotfiles repo if it doesn't already exist
 if [ ! -d "$DOTFILES_DIR" ]; then
     echo "Cloning dotfiles repo to $DOTFILES_DIR ..."
-    git clone "$REPO_URL" "$DOTFILES_DIR"
+    git clone --quiet "$REPO_URL" "$DOTFILES_DIR"
 else
     echo "Dotfiles directory already exists. Pulling latest changes ..."
-    git -C "$DOTFILES_DIR" pull
+    git -C "$DOTFILES_DIR" pull --quiet
 fi
 
 # create backup directory if it doesn't exist and backup original .bashrc
@@ -32,21 +32,13 @@ add_source_line() {
     local file=$1
     local source_line="source $file"
 
-    if [ ! grep -Fxq "$source_line" "$BASHRC" ]; then
+    if ! grep -Fxq "$source_line" "$BASHRC"; then
         echo "Adding source line for $file in $BASHRC ..."
         echo "$source_line" >> "$BASHRC"
     else
         echo "Source line for $file already present in $BASHRC"
     fi
 }
-
-# backup .bashrc if it doesn't already exist
-if [ ! -f "$BASHRC".bak ]; then
-    echo "Create backup for "
-    cp "$BASHRC" "$BASHRC".bak
-else
-    echo "Back up already present. Skipping ..."
-fi
 
 # add source lines for each config file in $CONFIG_DIR
 echo "Setting up .bashrc to source custom dotfiles ..."
