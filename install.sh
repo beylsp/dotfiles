@@ -63,7 +63,6 @@ DOTFILES_DIR=\"$CONFIG_DIR\"
 
 for config_file in \"\$DOTFILES_DIR\"/bash_*; do
     if [ -f \"\$config_file\" ]; then
-        echo \"Sourcing \$config_file\"
         source \"\$config_file\"
     fi
 done
