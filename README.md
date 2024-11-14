@@ -22,7 +22,7 @@ This command will:
 
 1. Clone the dotfiles repository to `~/dotfiles`.
 2. Backup any existing `.bashrc` to a `~/dotfiles_backup` directory.
-3. Source the main bashrc configuration file, allowing modular sourcing of additional configurations like aliases, exports, and more.
+3. Source the main `.bashrc` configuration file, allowing modular sourcing of additional configurations like aliases, exports, and more.
 
 ### Manual Install
 
@@ -49,15 +49,15 @@ dotfiles/
 ```
 
 * `config/`: Contains all configuration files. The installer script will source each file in this directory from your `.bashrc` file.
-* `install.sh`: The main installer script that sets up the dotfiles, backs up existing configurations, and sources the main .bashrc for modular loading of other settings.
+* `install.sh`: The main installer script that sets up the dotfiles, backs up existing configurations, and sources the main `.bashrc` for modular loading of other settings.
 
 ## Customization
 
-You can add new configuration files and source them within bashrc as needed. Simply commit and push any changes to keep your setup in sync across machines.
+You can add new configuration files and source them within `.bashrc` as needed. Simply commit and push any changes to keep your setup in sync across machines.
 
 ### Updating Your Dotfiles
 
-To update the dotfiles on a machine, simply navigate to ~/dotfiles and pull the latest changes:
+To update the dotfiles on a machine, simply navigate to `~/dotfiles` and pull the latest changes:
 
 ```bash
 cd ~/dotfiles
