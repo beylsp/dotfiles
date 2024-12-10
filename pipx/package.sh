@@ -17,8 +17,12 @@ function uninstall_package() {
 
 function init_package() {
     export PIPX_DEFAULT_PYTHON=python3.12
+    export PIPX_HOME=${DOTFILES_PREFIX}
+    export PIPX_BIN_DIR=${DOTFILES_BIN}
 }
 
 function uninit_package() {
     unset PIPX_DEFAULT_PYTHON
+    unset PIPX_HOME
+    unset PIPX_BIN_DIR
 }
