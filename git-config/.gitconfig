@@ -1,0 +1,6 @@
+[core]
+	editor = code --wait
+
+[user]
+    email = beylsp@yahoo.com
+    name = Patrik Beyls
